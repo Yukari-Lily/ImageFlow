@@ -43,7 +43,8 @@ export default function UploadDropzone({ onFilesSelected, maxUploadCount }: Uplo
       <div className="mb-4 bg-indigo-100 dark:bg-indigo-900/50 p-4 rounded-full">
         <UploadIcon className="h-10 w-10 text-indigo-500" />
       </div>
-      <p className="text-lg font-medium mb-2">拖放多张图片到这里</p>
+      <p className="text-lg font-medium mb-2">直接粘贴图片</p>
+      <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary mb-4">或者拖放多张图片到这里</p>
       <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary mb-4">或者点击选择文件（可多选）</p>
       <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary mb-4">最多可选择 {maxUploadCount} 张图片</p>
       <input
