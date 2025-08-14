@@ -54,7 +54,7 @@ export default function RootLayout({
 
         {/* 页脚 */}
         <div className="max-w-7xl mx-auto px-6 mt-8 text-center text-gray-600 dark:text-gray-400">
-          Create By{" "}
+          Modified by{" "}
           <a
             href="https://www.yukari-lily.com/"
             target="_blank"
