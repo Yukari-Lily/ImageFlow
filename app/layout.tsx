@@ -17,8 +17,8 @@ const notoSansSC = Noto_Sans_SC({
 });
 
 export const metadata: Metadata = {
-  title: "ImageFlow - 图片管理",
-  description: "一个简单而强大的图片管理工具",
+  title: "Yukari - Image",
+  description: "",
   icons: {
     icon: [
       { url: "/static/favicon.ico", sizes: "any" },
@@ -56,11 +56,11 @@ export default function RootLayout({
         <div className="max-w-7xl mx-auto px-6 mt-8 text-center text-gray-600 dark:text-gray-400">
           Create By{" "}
           <a
-            href="https://catcat.blog/"
+            href="https://www.yukari-lily.com/"
             target="_blank"
             className="text-indigo-500 hover:text-indigo-600 dark:text-indigo-400 dark:hover:text-indigo-300 transition-colors"
           >
-            猫猫博客
+            Yukari
           </a>
         </div>
       </body>
