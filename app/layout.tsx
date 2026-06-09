@@ -1,0 +1,69 @@
+import type { Metadata } from "next";
+import { Inter, Noto_Sans_SC } from "next/font/google";
+import { ClientErrorBoundary } from "./components/ClientErrorBoundary";
+import "./globals.css";
+
+// Configure Inter font
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '700'],
+});
+
+// Configure Noto Sans SC font with bold weight
+const notoSansSC = Noto_Sans_SC({
+  subsets: ['latin'],
+  weight: ['700'],  // Only use bold weight
+  display: 'swap',
+});
+
+export const metadata: Metadata = {
+  title: "Yukari - Image",
+  description: "",
+  icons: {
+    icon: [
+      { url: "/static/icon.png", type: "image/png" },
+      { url: "/static/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/static/icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="zh-CN" className="light">
+      <body className={`${inter.className} ${notoSansSC.className} page-bg py-10 transition-colors duration-300 light-mode font-bold`}>
+        {/* 动态背景 */}
+        <div className="animated-bg">
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+        </div>
+
+        <ClientErrorBoundary>
+          {children}
+        </ClientErrorBoundary>
+
+        {/* 页脚 */}
+        <div className="max-w-7xl mx-auto px-6 mt-8 text-center text-gray-600 dark:text-gray-400">
+          Modified by{" "}
+          <a
+            href="https://www.yukari-lily.com/"
+            target="_blank"
+            className="text-indigo-500 hover:text-indigo-600 dark:text-indigo-400 dark:hover:text-indigo-300 transition-colors"
+          >
+            Yukari
+          </a>
+        </div>
+      </body>
+    </html>
+  );
+}
